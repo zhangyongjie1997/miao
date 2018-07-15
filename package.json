@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "element-theme-chalk": "^2.4.4",
+    "element-ui": "^2.4.4",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -17,6 +20,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.4",
     "@vue/cli-service": "^3.0.0-rc.4",
     "@vue/eslint-config-prettier": "^3.0.0-rc.4",
+    "element-theme": "^2.0.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16"
