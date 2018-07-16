@@ -2,24 +2,47 @@
   <div class="main">
     <div class="title">
       <img src="../assets/register-title_06.jpg" width="70%">
-      <h2>注册账号</h2>
+      <h2>{{title}}</h2>
     </div>
     <div class="form">
-      <component :is="view"></component>
+      <component :is="view" @jump="viewChange"></component>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import register from '../components/welcome/register.vue';
+import login from '../components/welcome/login.vue';
+import changePwd from '../components/welcome/changePwd.vue';
 export default {
   data() {
     return {
-      view:'register'
+      view:'changePwd',
+      title:'注册账号'
+    }
+  },
+  methods:{
+    viewChange(val){
+      this.view = val;
+    }
+  },
+  watch:{
+    view(val){
+      switch(val){
+        case 'register':
+          this.title = '注册账号';
+          return;
+        case 'login' :
+          this.title = '登录';
+          return;
+        case 'changePwd' :
+          this.title = '修改密码';
+          return;
+      }
     }
   },
   components: {
-    register,
+    register,login,changePwd
   }
 }
 </script>

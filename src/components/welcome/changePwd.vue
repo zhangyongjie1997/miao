@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <el-form :model="registerForm" class="input" :rules="rules">
-      <el-form-item prop="name">
+    <el-form :model="changePwdForm" class="input" :rules="rules">
+      <el-form-item prop="password">
         <el-row class="row">
-          <el-col class="label" :span="4">昵称</el-col>
+          <el-col class="label" :span="4">新密码</el-col>
           <el-col :span="20">
-            <el-input v-model="registerForm.name" placeholder="请输入你的昵称"></el-input>
+            <el-input v-model="changePwdForm.password" type="password" placeholder="请输入你的昵称"></el-input>
           </el-col>
         </el-row>
       </el-form-item>
-      <el-form-item prop="password">
+      <el-form-item prop="password2">
         <el-row class="row">
-          <el-col class="label" :span="4">密码</el-col>
+          <el-col class="label" :span="4">确认密码</el-col>
           <el-col :span="20">
-            <el-input v-model="registerForm.password" type="password" placeholder="请输入6位以上的密码"></el-input>
+            <el-input v-model="changePwdForm.password2" type="password" placeholder="请输入6位以上的密码"></el-input>
           </el-col>
         </el-row>
       </el-form-item>
@@ -21,7 +21,7 @@
         <el-row class="row">
           <el-col class="label" :span="4">邮箱</el-col>
           <el-col :span="20">
-            <el-input v-model="registerForm.email" type="email" placeholder="请输入您的常用邮箱"></el-input>
+            <el-input v-model="changePwdForm.email" type="email" placeholder="请输入您的常用邮箱"></el-input>
           </el-col>
         </el-row>
       </el-form-item>
@@ -29,7 +29,7 @@
         <el-row class="row">
           <el-col class="label" :span="4">验证码</el-col>
           <el-col :span="20">
-            <el-input v-model="registerForm.code" placeholder="请输入验证码">
+            <el-input v-model="changePwdForm.code" placeholder="请输入验证码">
               <template slot="append">
                 <el-button>获取验证码</el-button>
               </template>
@@ -38,15 +38,12 @@
         </el-row>
       </el-form-item>
     </el-form>
-    <div class="register-foot">
-      <div class="register-info">
-        点击注册账号表示同意<a href="javascript:void(0)">服务条款</a>和<a href="javascript:void(0)">隐私条款</a>
+    <div class="changePwd-foot">
+      <div class="changePwd-btn">
+        <el-button size="medium" type="danger">修改密码</el-button>
       </div>
-      <div class="register-btn">
-        <el-button size="medium" type="danger">立即注册</el-button>
-      </div>
-      <div class="register-info" style="padding-top:20px;">
-        已有账号，立即 <a href="javascript:void(0)" @click="jump">登录</a>
+      <div class="changePwd-info" style="padding-top:20px;">
+        改变主意，直接 <a href="javascript:void(0)" @click="jump">登录</a>
       </div>
     </div>
   </div>
@@ -55,21 +52,29 @@
 <script type="text/ecmascript-6">
   export default {
     data() {
+      let checkPwd = (rule, value, callback)=>{
+        if(value !== this.changePwdForm.password){
+          callback(new Error('两次密码不一致'));
+        }else if(value == ''){
+          callback(new Error('请再次输入密码'));
+        }else{
+          callback();
+        }
+      }
       return {
-        registerForm:{
-          name:'',
+        changePwdForm:{
           password:'',
+          password2:'',
           email:'',
           code:''
         },
         rules:{
-          name:[
-            {required:true,message:'请输入正确的昵称',trigger: 'blur'},
-            { min:3,max:16,message:'请输入正确的昵称',trigger: 'blur'}
-          ],
           password:[
             {required:true,message:'请输入正确的密码',trigger: 'blur'},
             { min:6,max:16,message:'请输入正确的密码',trigger: 'blur'}
+          ],
+          password2:[
+            { validator: checkPwd, trigger: 'blur' },
           ],
           email:[
             {required:true,message:'请输入完整的邮箱地址',trigger: 'blur'},
@@ -94,16 +99,16 @@
     width: 100%;
     height: 200px;
     color: #555;
-    .register-foot{
-      .register-info{
-        font-size: 14px;
+    .changePwd-foot{
+      .changePwd-info{
+        font-size: 15px;
         text-align: center;
         padding-bottom: 20px;
         a{
           color: #fc8d59;
         }
       }
-      .register-btn{
+      .changePwd-btn{
         width: 100%;
         text-align: center;
       }
