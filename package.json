@@ -19,8 +19,6 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.4",
     "@vue/cli-service": "^3.0.0-rc.4",
     "@vue/eslint-config-prettier": "^3.0.0-rc.4",
-    "element-theme": "^2.0.1",
-    "element-theme-chalk": "^2.4.4",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16"
