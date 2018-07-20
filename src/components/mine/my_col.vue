@@ -1,110 +1,110 @@
 <template>
   <div id="myCol">
-    <p style="padding:10px;">我的收藏</p>
+    <p>我的收藏</p>
     <div class="colList">
-      <div class="colItem">
-        <div class="colImg">
-          <img src="../../assets/1.jpg">
-          <div class="colIcon">
+      <div class="col-item">
+        <div class="col-img">
+          <img src="../../assets/354.jpg">
+          <div class="col-icon">
             <i class="iconfont icon-shoucang1"></i>
           </div>
         </div>
-        <div class="colBar">
-          <div class="colPho">
-            <img src="../../assets/99.jpg">
+        <div class="col-bar">
+          <div class="col-pho">
+            <img src="../../assets/354.jpg">
             <a class="col-nick-name">昵称</a>
           </div>
-          <div class="colBar-icon">
+          <div class="col-bar-icon">
             <i class="iconfont icon-shoucang2"></i>
             <i class="iconfont icon-liuyan"></i>
           </div>
         </div>
       </div>
-      <div class="colItem">
-        <div class="colImg">
-          <img src="../../assets/1.jpg">
-          <div class="colIcon">
+      <div class="col-item">
+        <div class="col-img">
+          <img src="../../assets/354.jpg">
+          <div class="col-icon">
             <i class="iconfont icon-shoucang1"></i>
           </div>
         </div>
-        <div class="colBar">
-          <div class="colPho">
-            <img src="../../assets/99.jpg">
+        <div class="col-bar">
+          <div class="col-pho">
+            <img src="../../assets/354.jpg">
             <a class="col-nick-name">昵称</a>
           </div>
-          <div class="colBar-icon">
+          <div class="col-bar-icon">
             <i class="iconfont icon-shoucang2"></i>
             <i class="iconfont icon-liuyan"></i>
           </div>
         </div>
       </div>
-      <div class="colItem">
-        <div class="colImg">
-          <img src="../../assets/1.jpg">
-          <div class="colIcon">
+      <div class="col-item">
+        <div class="col-img">
+          <img src="../../assets/354.jpg">
+          <div class="col-icon">
             <i class="iconfont icon-shoucang1"></i>
           </div>
         </div>
-        <div class="colBar">
-          <div class="colPho">
-            <img src="../../assets/99.jpg">
+        <div class="col-bar">
+          <div class="col-pho">
+            <img src="../../assets/354.jpg">
             <a class="col-nick-name">昵称</a>
           </div>
-          <div class="colBar-icon">
+          <div class="col-bar-icon">
             <i class="iconfont icon-shoucang2"></i>
             <i class="iconfont icon-liuyan"></i>
           </div>
         </div>
       </div>
-      <div class="colItem">
-        <div class="colImg">
-          <img src="../../assets/1.jpg">
-          <div class="colIcon">
+      <div class="col-item">
+        <div class="col-img">
+          <img src="../../assets/354.jpg">
+          <div class="col-icon">
             <i class="iconfont icon-shoucang1"></i>
           </div>
         </div>
-        <div class="colBar">
-          <div class="colPho">
-            <img src="../../assets/99.jpg">
+        <div class="col-bar">
+          <div class="col-pho">
+            <img src="../../assets/354.jpg">
             <a class="col-nick-name">昵称</a>
           </div>
-          <div class="colBar-icon">
+          <div class="col-bar-icon">
             <i class="iconfont icon-shoucang2"></i>
             <i class="iconfont icon-liuyan"></i>
           </div>
         </div>
       </div>
-      <div class="colItem">
-        <div class="colImg">
-          <img src="../../assets/1.jpg">
-          <div class="colIcon">
+      <div class="col-item">
+        <div class="col-img">
+          <img src="../../assets/354.jpg">
+          <div class="col-icon">
             <i class="iconfont icon-shoucang1"></i>
           </div>
         </div>
-        <div class="colBar">
-          <div class="colPho">
-            <img src="../../assets/99.jpg">
+        <div class="col-bar">
+          <div class="col-pho">
+            <img src="../../assets/354.jpg">
             <a class="col-nick-name">昵称</a>
           </div>
-          <div class="colBar-icon">
+          <div class="col-bar-icon">
             <i class="iconfont icon-shoucang2"></i>
             <i class="iconfont icon-liuyan"></i>
           </div>
         </div>
       </div>
-      <div class="colItem">
-        <div class="colImg">
-          <img src="../../assets/1.jpg">
-          <div class="colIcon">
+      <div class="col-item">
+        <div class="col-img">
+          <img src="../../assets/354.jpg">
+          <div class="col-icon">
             <i class="iconfont icon-shoucang1"></i>
           </div>
         </div>
-        <div class="colBar">
-          <div class="colPho">
-            <img src="../../assets/99.jpg">
+        <div class="col-bar">
+          <div class="col-pho">
+            <img src="../../assets/354.jpg">
             <a class="col-nick-name">昵称</a>
           </div>
-          <div class="colBar-icon">
+          <div class="col-bar-icon">
             <i class="iconfont icon-shoucang2"></i>
             <i class="iconfont icon-liuyan"></i>
           </div>
@@ -133,27 +133,31 @@
     top: 0;
     left: 25%;
     width: 70%;
+    p{
+      padding: 30px;
+      font-size: 20px;
+    }
     .colList {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       width: 100%;
-      .colItem {
-        margin-bottom: 30px;
-        width: 30%;
-        height: 300px;
-        .colBar {
+      .col-item {
+        margin-bottom: 70px;
+        width: 275px;
+        height: 370px;
+        .col-bar {
           position: relative;
           display: flex;
           justify-content: space-between;
-          margin-top: 5px;
+          margin-top: 10px;
           height: 15%;
-          .colPho {
+          .col-pho {
             height: 37px;
             .col-nick-name{
               position: absolute;
               top: 8px;
-              left: 40px;
+              left: 50px;
               height: 100%;
             }
             img{
@@ -161,7 +165,7 @@
               height: 100%;
             }
           }
-          .colBar-icon{
+          .col-bar-icon{
             line-height: 37px;
             i{
               margin-right: 5px;
@@ -169,10 +173,10 @@
             }
           }
         }
-        .colImg {
+        .col-img {
           position: relative;
-          height: 85%;
-          .colIcon {
+          height: 320px;
+          .col-icon {
             position: absolute;
             top: 5px;
             right: 5px;
@@ -182,6 +186,7 @@
             }
           }
           img {
+            border-radius: 2%;
             width: 100%;
             height: 100%;
           }

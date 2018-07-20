@@ -42,7 +42,7 @@
   .mine-main {
     position: relative;
     margin: 100px auto;
-    width: 70%;
+    width: 85%;
   }
 
   .side-main {
