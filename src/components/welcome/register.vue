@@ -1,41 +1,21 @@
 <template>
   <div class="container">
-    <el-form :model="registerForm" class="input" :rules="rules">
-      <el-form-item prop="name">
-        <el-row class="row">
-          <el-col class="label" :span="4">昵称</el-col>
-          <el-col :span="20">
+    <el-form :model="registerForm" :rules="rules" label-position="left"  label-width="70px">
+      <el-form-item prop="name" label="昵称">
             <el-input v-model="registerForm.name" placeholder="请输入你的昵称"></el-input>
-          </el-col>
-        </el-row>
       </el-form-item>
-      <el-form-item prop="password">
-        <el-row class="row">
-          <el-col class="label" :span="4">密码</el-col>
-          <el-col :span="20">
+      <el-form-item prop="password" label="密码">
             <el-input v-model="registerForm.password" type="password" placeholder="请输入6位以上的密码"></el-input>
-          </el-col>
-        </el-row>
       </el-form-item>
-      <el-form-item prop="email">
-        <el-row class="row">
-          <el-col class="label" :span="4">邮箱</el-col>
-          <el-col :span="20">
+      <el-form-item prop="email" label="邮箱">
             <el-input v-model="registerForm.email" type="email" placeholder="请输入您的常用邮箱"></el-input>
-          </el-col>
-        </el-row>
       </el-form-item>
-      <el-form-item prop="code">
-        <el-row class="row">
-          <el-col class="label" :span="4">验证码</el-col>
-          <el-col :span="20">
+      <el-form-item prop="code" label="验证码">
             <el-input v-model="registerForm.code" placeholder="请输入验证码">
               <template slot="append">
                 <el-button>获取验证码</el-button>
               </template>
             </el-input>
-          </el-col>
-        </el-row>
       </el-form-item>
     </el-form>
     <div class="register-foot">
@@ -106,17 +86,6 @@
       .register-btn{
         width: 100%;
         text-align: center;
-      }
-    }
-    .input {
-      .row {
-        .label {
-          height: 40px;
-          text-align: center;
-          line-height: 40px;
-          font-size: 18px;
-          font-weight: bold;
-        }
       }
     }
   }

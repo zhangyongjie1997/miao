@@ -3,22 +3,22 @@
     <div class="side-main">
       <ul>
         <li  class="set">
-          <router-link tag="a" to="0">设置</router-link>
+          <router-link tag="a" to="/0">设置</router-link>
         </li>
         <li>
-          <router-link tag="a" to="1">个人资料</router-link>
+          <router-link tag="a" to="/1">个人资料</router-link>
         </li>
         <li>
-          <router-link tag="a" to="2">消息通知</router-link>
+          <router-link tag="a" to="/2/">消息通知</router-link>
         </li>
         <li>
-          <router-link tag="a" to="3">我的收藏</router-link>
+          <router-link tag="a" to="/3">我的收藏</router-link>
         </li>
         <li>
-          <router-link tag="a" to="4">关于领养</router-link>
+          <router-link tag="a" to="/4">关于领养</router-link>
         </li>
         <li>
-          <router-link tag="a" to="5">关于我和喵星人</router-link>
+          <router-link tag="a" to="/5">关于我和喵星人</router-link>
         </li>
       </ul>
     </div>

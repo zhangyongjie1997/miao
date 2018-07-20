@@ -1,21 +1,11 @@
 <template>
   <div class="container">
-    <el-form :model="loginForm" class="input" :rules="rules">
-      <el-form-item prop="email">
-        <el-row class="row">
-          <el-col class="label" :span="4">邮箱</el-col>
-          <el-col :span="20">
+    <el-form :model="loginForm" class="input" :rules="rules" label-position="left"  label-width="70px">
+      <el-form-item prop="email" label="邮箱">
             <el-input v-model="loginForm.email" type="email" placeholder="请输入您的常用邮箱"></el-input>
-          </el-col>
-        </el-row>
       </el-form-item>
-      <el-form-item prop="password">
-        <el-row class="row">
-          <el-col class="label" :span="4">密码</el-col>
-          <el-col :span="20">
+      <el-form-item prop="password" label="密码">
             <el-input v-model="loginForm.password" type="password" placeholder="请输入6位以上的密码"></el-input>
-          </el-col>
-        </el-row>
       </el-form-item>
     </el-form>
     <div class="login-foot">
@@ -80,17 +70,6 @@
       .login-btn{
         width: 100%;
         text-align: center;
-      }
-    }
-    .input {
-      .row {
-        .label {
-          height: 40px;
-          text-align: center;
-          line-height: 40px;
-          font-size: 18px;
-          font-weight: bold;
-        }
       }
     }
   }
