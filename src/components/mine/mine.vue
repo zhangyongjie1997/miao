@@ -17,9 +17,9 @@
         <li>
           <router-link tag="a" to="/4">关于领养</router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link tag="a" to="/5">关于我和喵星人</router-link>
-        </li>
+        </li> -->
       </ul>
     </div>
     <router-view></router-view>

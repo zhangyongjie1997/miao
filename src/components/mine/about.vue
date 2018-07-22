@@ -35,8 +35,8 @@
         <div class="item-btn">
           <ul>
             <li>修改</li>
-            <li>修改</li>
-            <li>修改</li>
+            <li style="cursor:auto;">&nbsp;&nbsp;</li>
+            <li style="cursor:auto;">&nbsp;&nbsp;</li>
             <li>修改</li>
             <li>修改</li>
           </ul>
@@ -70,8 +70,8 @@
         <div class="item-btn">
           <ul>
             <li>修改</li>
-            <li>修改</li>
-            <li>修改</li>
+            <li style="cursor:auto;">&nbsp;&nbsp;</li>
+            <li style="cursor:auto;">&nbsp;&nbsp;</li>
             <li>修改</li>
             <li>修改</li>
           </ul>
@@ -108,8 +108,8 @@
         <div class="item-btn">
           <ul>
             <li>修改</li>
-            <li>修改</li>
-            <li>修改</li>
+            <li style="cursor:auto;">&nbsp;&nbsp;</li>
+            <li style="cursor:auto;">&nbsp;&nbsp;</li>
             <li>修改</li>
             <li>修改</li>
           </ul>
@@ -158,6 +158,9 @@
               color: #666;
               margin-top: 15px;
               font-size: 14px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
           }
         }
@@ -185,6 +188,9 @@
             width: 101px;
             ul {
               li {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 color: #666;
                 margin-top: 15px;
                 font-size: 14px;
@@ -206,7 +212,7 @@
           cursor: pointer;
         }
         li.red {
-          color: #d73027;
+          color: #fc8d59;
         }
       }
 
